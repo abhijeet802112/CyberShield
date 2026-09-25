@@ -1,0 +1,580 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 35px;
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #123c69;
+    margin-bottom: 8px;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+p {
+    color: #4b5563;
+}
+
+/* Input fields */
+
+input,
+textarea,
+select {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Buttons */
+
+button {
+    padding: 12px 24px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 7px;
+    background: #123c69;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0b2d4d;
+}
+
+/* Links */
+
+a {
+    color: #123c69;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard cards */
+
+.container > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Horizontal lines */
+
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 25px 0;
+}
+
+/* Alert text */
+
+small {
+    color: #6b7280;
+}
+/* Security Overview Cards */
+
+.container > div {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 8px;
+    min-width: 150px;
+    display: inline-block;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.container > div h3 {
+    color: #123c69;
+}
+
+.container > div h2 {
+    font-size: 28px;
+    margin: 5px;
+    color: #111827;
+}
+
+
+.container > div {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #123c69;
+    box-shadow: 0 0 0 3px rgba(18, 60, 105, 0.12);
+}
+
+button {
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+/* =========================================================
+CYBERSHIELD PROFESSIONAL DASHBOARD / INCIDENT UI
+========================================================= */
+
+.dashboard-layout {
+display: flex;
+min-height: 100vh;
+background: #f4f7fb;
+}
+
+.sidebar {
+width: 250px;
+min-height: 100vh;
+background: #0f2742;
+color: white;
+padding: 25px 18px;
+position: fixed;
+left: 0;
+top: 0;
+bottom: 0;
+display: flex;
+flex-direction: column;
+}
+
+.logo {
+font-size: 22px;
+font-weight: 700;
+padding: 5px 12px 30px;
+}
+
+.logo span {
+margin-left: 5px;
+}
+
+.user-section {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 15px 10px;
+border-top: 1px solid rgba(255,255,255,0.12);
+border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.user-avatar {
+width: 42px;
+height: 42px;
+border-radius: 50%;
+background: #2563eb;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 17px;
+font-weight: bold;
+}
+
+.user-section h3 {
+margin: 0;
+color: white;
+font-size: 14px;
+}
+
+.welcome-text {
+margin: 0 0 3px;
+color: #9fb2c8;
+font-size: 11px;
+}
+
+.nav-title {
+color: #8195ab;
+font-size: 11px;
+font-weight: bold;
+margin: 28px 12px 12px;
+letter-spacing: 1px;
+}
+
+.sidebar-nav {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.sidebar-nav a {
+display: flex;
+align-items: center;
+gap: 12px;
+padding: 12px 13px;
+color: #c7d4e3;
+border-radius: 8px;
+font-size: 14px;
+font-weight: 500;
+text-decoration: none;
+transition: all 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+background: rgba(255,255,255,0.08);
+color: white;
+text-decoration: none;
+}
+
+.sidebar-nav a.active {
+background: #2563eb;
+color: white;
+}
+
+.sidebar-bottom {
+margin-top: auto;
+border-top: 1px solid rgba(255,255,255,0.12);
+padding-top: 18px;
+}
+
+.sidebar-bottom a {
+display: block;
+padding: 10px 12px;
+color: #c7d4e3;
+text-decoration: none;
+font-size: 14px;
+}
+
+.sidebar-bottom a:hover {
+color: white;
+text-decoration: none;
+}
+
+.main-content {
+margin-left: 250px;
+width: calc(100% - 250px);
+padding: 35px 45px;
+}
+
+.top-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 30px;
+}
+
+.top-header h1 {
+margin: 0 0 7px;
+color: #172b4d;
+font-size: 28px;
+}
+
+.top-header p {
+margin: 0;
+color: #64748b;
+font-size: 14px;
+}
+
+.back-btn {
+background: white;
+border: 1px solid #dbe3ec;
+padding: 10px 17px;
+border-radius: 8px;
+color: #334155;
+font-size: 14px;
+text-decoration: none;
+font-weight: 600;
+}
+
+.back-btn:hover {
+background: #f8fafc;
+text-decoration: none;
+}
+
+.incident-card {
+background: white;
+border: 1px solid #e2e8f0;
+border-radius: 14px;
+padding: 30px;
+max-width: 950px;
+box-shadow: 0 5px 20px rgba(15,39,66,0.06);
+}
+
+.card-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-bottom: 22px;
+border-bottom: 1px solid #edf1f5;
+margin-bottom: 25px;
+}
+
+.card-header h2 {
+margin: 0 0 5px;
+color: #172b4d;
+font-size: 20px;
+}
+
+.card-header p {
+margin: 0;
+font-size: 13px;
+color: #64748b;
+}
+
+.security-icon {
+width: 48px;
+height: 48px;
+border-radius: 10px;
+background: #eff6ff;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+}
+
+.incident-form {
+width: 100%;
+}
+
+.form-group {
+margin-bottom: 20px;
+width: 100%;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+color: #334155;
+font-size: 13px;
+font-weight: 600;
+}
+
+.incident-form input,
+.incident-form textarea,
+.incident-form select {
+width: 100%;
+margin: 0;
+padding: 12px 14px;
+border: 1px solid #d5dde7;
+border-radius: 8px;
+background: #ffffff;
+color: #1e293b;
+font-size: 14px;
+font-family: Arial, sans-serif;
+transition: all 0.2s ease;
+}
+
+.incident-form textarea {
+min-height: 145px;
+resize: vertical;
+}
+
+.incident-form input:focus,
+.incident-form textarea:focus,
+.incident-form select:focus {
+outline: none;
+border-color: #2563eb;
+box-shadow: 0 0 0 3px rgba(37,99,235,0.10);
+}
+
+.form-row {
+display: flex;
+gap: 20px;
+}
+
+.form-row .form-group {
+flex: 1;
+}
+
+.severity-info {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 10px;
+margin: 5px 0 25px;
+}
+
+.severity-info div {
+background: #f8fafc;
+border: 1px solid #e5eaf0;
+border-radius: 8px;
+padding: 12px;
+}
+
+.severity-info strong {
+display: block;
+color: #334155;
+font-size: 12px;
+margin-bottom: 4px;
+}
+
+.severity-info span {
+display: block;
+color: #64748b;
+font-size: 11px;
+line-height: 1.4;
+}
+
+.form-actions {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 12px;
+padding-top: 20px;
+border-top: 1px solid #edf1f5;
+}
+
+.cancel-btn {
+padding: 11px 20px;
+border: 1px solid #d5dde7;
+border-radius: 8px;
+color: #475569;
+background: white;
+font-size: 14px;
+font-weight: 600;
+text-decoration: none;
+}
+
+.cancel-btn:hover {
+background: #f8fafc;
+text-decoration: none;
+}
+
+.submit-btn {
+margin: 0;
+padding: 11px 22px;
+background: #2563eb;
+border-radius: 8px;
+font-size: 14px;
+font-weight: 600;
+}
+
+.submit-btn:hover {
+background: #1d4ed8;
+transform: translateY(-1px);
+}
+
+.security-notice {
+max-width: 950px;
+margin-top: 20px;
+padding: 18px 20px;
+background: #eff6ff;
+border: 1px solid #dbeafe;
+border-radius: 10px;
+display: flex;
+align-items: flex-start;
+gap: 14px;
+}
+
+.notice-icon {
+font-size: 20px;
+}
+
+.security-notice h3 {
+margin: 0 0 5px;
+color: #1e40af;
+font-size: 14px;
+}
+
+.security-notice p {
+margin: 0;
+color: #475569;
+font-size: 12px;
+line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+
+```
+.sidebar {
+    width: 210px;
+}
+
+.main-content {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 25px;
+}
+
+.severity-info {
+    grid-template-columns: repeat(2, 1fr);
+}
+```
+
+}
+
+@media (max-width: 650px) {
+
+```
+.dashboard-layout {
+    display: block;
+}
+
+.sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+}
+
+.main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+.top-header {
+    display: block;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.form-row {
+    display: block;
+}
+
+.severity-info {
+    grid-template-columns: 1fr;
+}
+
+.form-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+}
+
+.cancel-btn,
+.submit-btn {
+    text-align: center;
+    width: 100%;
+}
+```
+
+}
